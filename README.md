@@ -1,10 +1,20 @@
-## つかいかた
+## How to Use
 
-事前にコマンドプロンプトから以下を実行し、chocolatey をインストールしておく。
+### Install Chocolatey
 
-     @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+詳しくはこちらを参照： https://chocolatey.org/install
 
-chocolateyのインストールが完了したら以下のコマンドでパッケージをどかどかーっとインストール
+管理者権限でWindows Power Shellを起動して、次のコマンドを実行：
 
-    cinst packages.config
+    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
+### Install Modules
+
+次のコマンドを実行する：
+
+    (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Maki-Daisuke/chocolatey/master/packages.config') > packages.config
+    choco install -y packages.config
+
+### Upgrade Modules
+
+    choco upgrade all
