@@ -10,10 +10,14 @@
 
 ### Install Modules
 
-次のコマンドを実行する：
+次のコマンドを実行して、インストール対象のリストを取得する：
 
     (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Maki-Daisuke/chocolatey/master/packages.config') > packages.config
-    choco install -y packages.config
+
+必要なら、ここで `packages.config` を編集する。
+次のコマンドを実行してインストールする：
+
+    choco install -y packages.config
 
 ### Upgrade Modules
 
