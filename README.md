@@ -14,8 +14,8 @@
 
 PowerShellを管理者権限で開き、次のコマンドを実行してインストール対象のリストを取得する：
 
-    cd $HOME  # ファイルをダウンロードするので、ホームディレクトリに移動しておく
-    (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Maki-Daisuke/chocolatey/master/packages.config') > packages.config
+    cd $HOME  # ファイルをダウンロードするので、ホームディレクトリに移動しておく
+    (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Maki-Daisuke/chocolatey/master/packages.config') > packages.config
 
 必要なら、ここで `packages.config` を編集する。
 次のコマンドを実行してインストールする：
